@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  test:
+  Test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -43,7 +43,7 @@ jobs:
         uses: dorny/test-reporter@v1
         if: success() || failure()
         with:
-          name: JEST Tests
+          name: Test Results
           path: test-results.xml
           reporter: jest-junit
 
@@ -54,7 +54,7 @@ jobs:
           name: test-results
           path: test-results.xml
 
-  build:
+  Build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
