@@ -1,4 +1,6 @@
 # Vue-Vite Starter
+[![Test and Build](https://github.com/andrewcourtice/vue-vite-starter/actions/workflows/test-and-build.yml/badge.svg)](https://github.com/andrewcourtice/vue-vite-starter/actions/workflows/test-and-build.yml)
+
  An extremely simple Vue starter template written in TypeScript using Vite (compiler) and Harlem (state management).
 
  # Resources
