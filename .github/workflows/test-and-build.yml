@@ -39,6 +39,14 @@ jobs:
       - name: Run Tests
         run: yarn test
 
+      - name: Report Test Results
+        uses: dorny/test-reporter@v1
+        if: success() || failure()
+        with:
+          name: JEST Tests
+          path: test-results.xml
+          reporter: jest-junit
+
       # Upload the test results
       - name: Upload Test Results
         uses: actions/upload-artifact@v2
