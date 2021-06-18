@@ -16,7 +16,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  build:
+  test:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -40,8 +40,8 @@ jobs:
         run: yarn test
 
       # Upload the test results
-#       - name: Upload Test Results
-#         uses: actions/upload-artifact@v2
-#         with:
-#           name: test-results
-#           path: test-results.xml
+      - name: Upload Test Results
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-results
+          path: test-results.xml
