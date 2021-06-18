@@ -55,7 +55,7 @@ export const incompleteTasks = getter('incomplete-tasks', () => tasks.value.filt
  * @example "Do the laundry"
  */
 export const addTask = mutation('add-task', (state, value: string) => {
-    const id = Math.random() * 100000;
+    const id = Math.round(Math.random() * 1000000);
 
     state.tasks.push({
         id,
