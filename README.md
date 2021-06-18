@@ -17,4 +17,5 @@
  - [Vite documentation](https://vitejs.dev)
  - [Harlem documentation](https://harlemjs.com)
  - [Typescript documentation](https://www.typescriptlang.org)
+ - [Flex Layout Attribute documentation](https://progressivered.com/fla)
  - [Jest documentation](https://jestjs.io)
