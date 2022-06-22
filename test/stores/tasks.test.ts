@@ -1,10 +1,17 @@
 import {
-    tasks,
-    completeTasks,
+    beforeEach,
+    describe,
+    expect,
+    test,
+} from 'vitest';
+
+import {
     addTask,
     completeTask,
+    completeTasks,
     removeTask,
-    reset
+    reset,
+    tasks,
 } from '../../src/stores/tasks';
 
 describe('Tasks Store', () => {
@@ -20,7 +27,7 @@ describe('Tasks Store', () => {
 
     test('Should be able to complete a task', () => {
         const {
-            id
+            id,
         } = tasks.value[0];
 
         completeTask(id);
@@ -32,7 +39,7 @@ describe('Tasks Store', () => {
 
     test('Should be able to remove a task', () => {
         const {
-            id
+            id,
         } = tasks.value[0];
 
         removeTask(id);

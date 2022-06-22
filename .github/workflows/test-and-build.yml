@@ -19,7 +19,7 @@ jobs:
       - name: Prepare NodeJS
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: 16.x
 
       - name: Get Yarn Cache Path
         id: yarn-cache-dir-path
@@ -34,7 +34,7 @@ jobs:
             ${{ runner.os }}-yarn-
           
       - name: Install Dependencies
-        run: yarn --frozen-lockfile
+        run: yarn install
         
       - name: Run Tests
         run: yarn test
@@ -44,14 +44,14 @@ jobs:
         if: success() || failure()
         with:
           name: Test Results
-          path: test-results.xml
+          path: .reports/tests/results.xml
           reporter: jest-junit
 
       - name: Upload Test Results
         uses: actions/upload-artifact@v2
         with:
           name: test-results
-          path: test-results.xml
+          path: .reports/tests/results.xml
 
   Build:
     runs-on: ubuntu-latest
@@ -61,7 +61,7 @@ jobs:
       - name: Prepare NodeJS
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x
+          node-version: 16.x
 
       - name: Get Yarn Cache Path
         id: yarn-cache-dir-path
@@ -76,7 +76,7 @@ jobs:
             ${{ runner.os }}-yarn-
           
       - name: Install Dependencies
-        run: yarn --frozen-lockfile
+        run: yarn
         
       - name: Run Build
         run: yarn build
