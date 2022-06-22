@@ -1,7 +1,7 @@
-# Vue-Vite Starter
+# Vue-Vite App Template
 [![Test and Build](https://github.com/andrewcourtice/vue-vite-starter/actions/workflows/test-and-build.yml/badge.svg)](https://github.com/andrewcourtice/vue-vite-starter/actions/workflows/test-and-build.yml)
 
- An extremely simple Vue 3 starter template written in TypeScript using Vite (compiler), Harlem (state management) and Jest (test runner).
+ An extremely simple Vue 3 starter template written in TypeScript using Vite (compiler), Harlem (state management) and Vitest (test runner).
 
  # Getting Started
 
@@ -13,9 +13,9 @@
     - Build - `yarn build`
 
  # Resources
- - [Vue 3 documentation](https://v3.vuejs.org)
+ - [Vue documentation](https://vuejs.org)
  - [Vite documentation](https://vitejs.dev)
  - [Harlem documentation](https://harlemjs.com)
  - [Typescript documentation](https://www.typescriptlang.org)
  - [Flex Layout Attribute documentation](https://progressivered.com/fla)
- - [Jest documentation](https://jestjs.io)
+ - [Vitest documentation](https://vitest.dev)
