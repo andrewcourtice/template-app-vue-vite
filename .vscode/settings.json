@@ -1,0 +1,21 @@
+{
+    "npm.packageManager": "yarn",
+    "eslint.packageManager": "yarn",
+    "eslint.validate": [
+        "javascript",
+        "typescript",
+        "vue"
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "volar.codeLens.pugTools": false,
+    "volar.codeLens.scriptSetupTools": false,
+    "volar.icon.preview": false,
+    "volar.vueserver.useSecondServer": true,
+    "html.autoCreateQuotes": false,
+    "[vue]": {
+        "editor.semanticHighlighting.enabled": false
+    },
+    "typescript.tsdk": "node_modules/typescript/lib",
+}

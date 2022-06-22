@@ -1,24 +1,36 @@
 import './styles/index.scss';
 
 import Harlem from '@harlem/core';
-import createResetPlugin from '@harlem/plugin-reset';
 import createDevtoolsPlugin from '@harlem/plugin-devtools';
 
 import App from './app.vue';
 
+import routes from '~/routes';
+
 import {
-    createApp
+    createApp,
 } from 'vue';
 
+import {
+    createRouter,
+    createWebHistory,
+} from 'vue-router';
+
 function start() {
-    return createApp(App)
-        .use(Harlem, {
-            plugins: [
-                createResetPlugin(),
-                createDevtoolsPlugin()
-            ]
-        })
-        .mount('#app');
+    const app = createApp(App);
+    const router = createRouter({
+        routes,
+        history: createWebHistory(),
+    });
+
+    app.use(router);
+    app.use(Harlem, {
+        plugins: [
+            createDevtoolsPlugin(),
+        ],
+    });
+
+    app.mount('#app');
 }
 
 start();
